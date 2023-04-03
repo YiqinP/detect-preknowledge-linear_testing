@@ -95,5 +95,5 @@ class Data_Simulartor_Linear:
                 rt[gp][-guess_num:] = guess_rt
                 self.aberrant_ind.append([gp, guess_num])
 
-        self = {'rep': rep, 'rt': rt}
+        self.simu_data = {'rep': rep, 'rt': rt}
 
