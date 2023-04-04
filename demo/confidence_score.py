@@ -11,7 +11,7 @@ class ConfidenceScore:
         self.nn_ppl = np.where(detect_res.count_ppl!=0)[0]
 
         self.resp = data['rep'].astype('float')
-        self.resp_org = data.org_data['rep']
+        self.resp_org = data['rep_org']
         self.ppl_num, self.item_num = self.resp.shape
 
         self.reduce_node_num, self.middle_node_num = 10, 50
