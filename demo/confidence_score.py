@@ -11,7 +11,7 @@ class ConfidenceScore:
         self.nn_ppl = np.where(detect_res.count_ppl!=0)[0]
 
         self.resp = data['rep'].astype('float')
-        self.resp_org = data['rep_org']
+        
         self.ppl_num, self.item_num = self.resp.shape
 
         self.reduce_node_num, self.middle_node_num = 10, 50
@@ -51,7 +51,7 @@ class ConfidenceScore:
         """ This is the function for post check"""
 
         self.nn_pred_resp_05 = 1 * (self.nn_pred_prob > 0.5)
-        self.dif_nn = np.round(np.mean(abs(self.resp_org - self.nn_pred_resp_05)), 3)
+        self.dif_nn = np.round(np.mean(abs(self.resp - self.nn_pred_resp_05)), 3)
 
         "calculate item index and ppl index"
 
