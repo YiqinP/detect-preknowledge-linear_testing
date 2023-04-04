@@ -50,7 +50,7 @@ class ConfidenceScore:
 
         """ This is the function for post check"""
 
-        #self.nn_pred_resp_05 = 1 * (self.nn_pred_prob > 0.5)
+        self.nn_pred_resp_05 = 1 * (self.nn_pred_prob > 0.5)
         #self.dif_nn = np.round(np.mean(abs(self.resp - self.nn_pred_resp_05)), 3)
 
         "calculate item index and ppl index"
