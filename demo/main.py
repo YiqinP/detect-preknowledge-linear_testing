@@ -5,6 +5,7 @@ from data_simulation_linear import Data_Simulartor_Linear
 
 def main(name):
     detect = Detect(name)
+    detect.process()
     print('suspicious_item_ID: ', detect.detect_result.res_mid['comp_item_name'])
     print('suspicious_examinee_ID: ', detect.detect_result.res_mid['comp_ppl_id'])
     print('item-level confidence score:', detect.confidence_score.item_ratio)
@@ -26,6 +27,7 @@ if __name__ == '__main__':
         f.write(str_)
     f.close()
     
+    simulated_data.simu_data['rep_org'] = simulated_data.org_data['rep']
     with open(name, 'wb') as f:
         str_ = pickle.dumps(simulated_data.simu_data)
         f.write(str_)
