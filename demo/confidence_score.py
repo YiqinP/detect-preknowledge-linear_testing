@@ -50,8 +50,8 @@ class ConfidenceScore:
 
         """ This is the function for post check"""
 
-        self.nn_pred_resp_05 = 1 * (self.nn_pred_prob > 0.5)
-        self.dif_nn = np.round(np.mean(abs(self.resp - self.nn_pred_resp_05)), 3)
+        #self.nn_pred_resp_05 = 1 * (self.nn_pred_prob > 0.5)
+        #self.dif_nn = np.round(np.mean(abs(self.resp - self.nn_pred_resp_05)), 3)
 
         "calculate item index and ppl index"
 
@@ -72,6 +72,6 @@ class AfterConfidenceScore:
     def __init__(self, experiment):
 
         self.nn_pred_prob = experiment.nn_pred_prob
-        self.dif_nn = experiment.dif_nn
+        #self.dif_nn = experiment.dif_nn
         self.ppl_ratio = experiment.ppl_ratio
         self.item_ratio = experiment.item_ratio
