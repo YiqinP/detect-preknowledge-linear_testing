@@ -39,7 +39,7 @@ class DetectItem:
     def prepare_data(self):
         # center rt
         if self.rt is None:
-            self.rt, self.crt  = copy.deepcopy((self.data['rt'])), copy.deepcopy((self.data.['rt']))
+            self.rt, self.crt  = copy.deepcopy((self.data['rt'])), copy.deepcopy((self.data['rt']))
             self.resp = (self.data['rep'])
             rt_item, rt_ppl = np.nanmedian(self.rt, axis=0), np.nanmedian(self.rt, axis=1)   # hang, lie
             self.crt -= ( np.repeat([rt_item], self.ppl_num, axis=0)+ np.transpose(np.repeat([rt_ppl], self.item_num, axis=0)))

@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     name = 'my_data'
 
-    """
+
     # simulate data if you do not have one
     
     simulated_data = Data_Simulartor_Linear(ppl_num=1000, item_num=100, ewp_rate=0.2, ci_rate=0.3, simu_distr={'dist': 1}, ci_accss=0.8)
@@ -32,5 +32,5 @@ if __name__ == '__main__':
         str_ = pickle.dumps(simulated_data.simu_data)
         f.write(str_)
     f.close()
-    """
+
     detect = main(name)
